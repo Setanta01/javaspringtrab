@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Médicos</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <h1>Buscar Médicos</h1>
+
+    <!-- Formulário para Busca -->
+    <form action="/buscarMedicos" method="GET">
+        <label for="filtro">Buscar por Nome ou Especialidade:</label>
+        <input type="text" id="filtro" name="filtro" placeholder="Digite nome ou especialidade">
+        <button type="submit">Buscar</button>
+    </form>
+
+    <!-- Resultado da Busca -->
+<ul>
+    <li th:each="medico : ${medicos}">
+        <!-- Nome -->
+        <strong>Nome:</strong>
+        <span th:text="${medico.nome}"></span> |
+
+        <!-- Especialidade -->
+        <strong>Especialidade:</strong>
+        <span th:text="${medico.especialidade}"></span> |
+
+        <!-- Estrelas -->
+        <strong>Estrelas:</strong>
+        <span th:text="${medico.mediaEstrelas != null ? medico.mediaEstrelas : 'Sem avaliações'}"></span> |
+
+        <!-- Últimas Avaliações -->
+        <strong>Últimas Avaliações:</strong>
+        <span th:text="${medico.ultimasAvaliacoes != null ? medico.ultimasAvaliacoes : 'Nenhuma avaliação encontrada'}"></span>
+    </li>
+</ul>
+
+
+
+    <!-- Caso não existam médicos -->
+    <p th:if="${#lists.isEmpty(medicos)}" style="color: red;">Nenhum médico encontrado.</p>
+</body>
+</html>

@@ -1,0 +1,7 @@
+body {
+    background-color: #00264e;
+}
+
+h1, h2, h3, h4, span, label, p, li, strong{
+    color: white;
+}

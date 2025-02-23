@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Doutor</title>
+    <link rel="stylesheet" href="/css/cadastro-doutor.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Cadastro do Doutor</h2>
+        <form action="/cadastrarDoutor" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+            <label for="especialidade">Especialidade:</label>
+            <input type="text" id="especialidade" name="especialidade" placeholder="Exemplo: Cardiologista, Ortopedista, etc." required>
+
+            <label for="planoAtendido">Planos de Saúde Atendidos:</label>
+            <input type="text" id="planoAtendido" name="planoAtendido" placeholder="Exemplo: Unimed, Bradesco, etc." required>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+</body>
+</html>

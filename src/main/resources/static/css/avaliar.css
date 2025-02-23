@@ -1,0 +1,82 @@
+/* Define a cor de fundo da página */
+body {
+    background-color: #00264e;
+    color: white; /* Cor do texto geral */
+    font-family: Arial, sans-serif; /* Fonte padrão */
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Garante que o conteúdo ocupe toda a altura da tela */
+}
+
+/* Estilo do título principal */
+h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Estilo dos parágrafos com informações do médico */
+p {
+    margin: 10px 0;
+}
+
+/* Estilo dos textos em negrito */
+strong {
+    color: white;
+}
+
+/* Estilo do formulário de avaliação */
+form {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px; /* Largura máxima do formulário */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    margin-top: 20px;
+}
+
+/* Estilo dos labels */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: white;
+}
+
+/* Estilo dos inputs e select */
+input[type="hidden"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+    color: #00264e; /* Cor do texto dentro dos inputs */
+}
+
+/* Estilo do textarea */
+textarea {
+    resize: vertical; /* Permite redimensionar verticalmente */
+    min-height: 100px;
+}
+
+/* Estilo do botão */
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff; /* Cor do botão */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor do botão ao passar o mouse */
+}

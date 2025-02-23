@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Paciente</title>
+    <link rel="stylesheet" href="/css/cadastro-doutor.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>Cadastro do Paciente</h2>
+        <form action="/cadastrarPaciente" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+
+            <label for="idade">Idade:</label>
+            <input type="number" id="idade" name="idade" placeholder="Digite sua idade" required>
+
+            <label for="planoSaude">Plano de Saúde:</label>
+            <input type="text" id="planoSaude" name="planoSaude" placeholder="Exemplo: Unimed, Bradesco, etc.">
+
+            <!-- Checkbox para "Não tenho Plano de Saúde" -->
+            <div>
+                <input type="checkbox" id="naoTenhoPlano" name="naoTenhoPlano" onclick="marcarSemPlano()">
+                <label for="naoTenhoPlano">Caso não tenha plano de saúde, marque esta opção.</label>
+            </div>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+
+    <!-- Script JavaScript -->
+    <script>
+        function marcarSemPlano() {
+            const checkbox = document.getElementById("naoTenhoPlano");
+            const planoSaudeInput = document.getElementById("planoSaude");
+
+            // Se o checkbox for marcado, definir "não tenho" automaticamente no plano de saúde
+            if (checkbox.checked) {
+                planoSaudeInput.value = "não tenho";
+                planoSaudeInput.setAttribute("readonly", true); // Torna o campo "somente leitura"
+            } else {
+                planoSaudeInput.value = ""; // Limpa o campo caso desmarque
+                planoSaudeInput.removeAttribute("readonly"); // Permite edição novamente
+            }
+        }
+    </script>
+</body>
+</html>
